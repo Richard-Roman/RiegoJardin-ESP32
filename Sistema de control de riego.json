@@ -1,0 +1,437 @@
+[
+    {
+        "id": "28381ab7fc538ddf",
+        "type": "tab",
+        "label": "Sistema de Riego",
+        "disabled": false,
+        "info": "# SISTEMA DE RIEGO AUTOMATICO\r\n## Proposito\r\nGestionar y controlar el riego \r\nde un jardin de forma remota.\r\nMostrar la temperatura y la \r\nhumedad de jardin\r\n\r\n## Componentes principales:\r\n - ESP32-WROOM-32\r\n - Sensor DHT11\r\n - Valvula de control de agua\r\n\r\n## Conexion:\r\nLa traferencia de informacion por\r\ninternet se realizo utilizando **MQTT**.\r\nServicio proveido por **HiveMQ**.",
+        "env": []
+    },
+    {
+        "id": "8bd0916a25d0896a",
+        "type": "ui_group",
+        "name": "Sensor DHT",
+        "tab": "ab273459232bec66",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6dcdb443594fd529",
+        "type": "ui_group",
+        "name": "Sensor DHT",
+        "tab": "ab273459232bec66",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ab273459232bec66",
+        "type": "ui_tab",
+        "name": "Menu",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9ab6ec9c70f15db4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#fd9f1c",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Alternarive",
+                "default": "#4B7930",
+                "baseColor": "#34f1fe",
+                "baseFont": "Gill Sans,Geneva,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#fd9f1c",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#fd9f1c",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#febf68",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#fd9f1c",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "orange",
+                "accents": "deep-orange",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Sistema de Riego",
+            "hideToolbar": "false",
+            "allowSwipe": "menu",
+            "lockMenu": "false",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "090a2449b070508c",
+        "type": "mqtt-broker",
+        "name": "Server",
+        "broker": "cdb39d727533450abfa0d803133c8e6b.s2.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "841f04bb7e649d81",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "841f04bb7e649d81",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "isrgrootx1.pem",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "7700e4c1950213e7",
+        "type": "ui_group",
+        "name": "REGADO",
+        "tab": "ab273459232bec66",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "09c3aa4b03bd6645",
+        "type": "ui_group",
+        "name": "Sensor de Humedad de suelo",
+        "tab": "ab273459232bec66",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b183bcdc7d344ce4",
+        "type": "mqtt in",
+        "z": "28381ab7fc538ddf",
+        "name": "Temperatura",
+        "topic": "sensor/temp",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "090a2449b070508c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "6844e964ef39d518",
+                "0a5881231d41a659"
+            ]
+        ]
+    },
+    {
+        "id": "0a5881231d41a659",
+        "type": "ui_chart",
+        "z": "28381ab7fc538ddf",
+        "name": "",
+        "group": "8bd0916a25d0896a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura °C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "20",
+        "ymax": "35",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 920,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "556ec867ce17ca76",
+        "type": "ui_gauge",
+        "z": "28381ab7fc538ddf",
+        "name": "",
+        "group": "6dcdb443594fd529",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humedad del ambiente",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 950,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "9c36363009220466",
+        "type": "mqtt in",
+        "z": "28381ab7fc538ddf",
+        "name": "Humedad",
+        "topic": "sensor/hum1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "090a2449b070508c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [
+                "556ec867ce17ca76",
+                "6844e964ef39d518"
+            ]
+        ]
+    },
+    {
+        "id": "6844e964ef39d518",
+        "type": "debug",
+        "z": "28381ab7fc538ddf",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f3ee3f973b524fd1",
+        "type": "ui_button",
+        "z": "28381ab7fc538ddf",
+        "name": "Regar",
+        "group": "7700e4c1950213e7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Regar",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "R",
+        "payloadType": "str",
+        "topic": "regado/msj",
+        "topicType": "msg",
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "6844e964ef39d518",
+                "9e563b2139e024ec"
+            ]
+        ]
+    },
+    {
+        "id": "23c79d35a0c10d79",
+        "type": "mqtt in",
+        "z": "28381ab7fc538ddf",
+        "name": "Humedad Suelo",
+        "topic": "sensor/hum2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "090a2449b070508c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 420,
+        "y": 720,
+        "wires": [
+            [
+                "6844e964ef39d518",
+                "a7e24971e33c2a60"
+            ]
+        ]
+    },
+    {
+        "id": "a7e24971e33c2a60",
+        "type": "ui_gauge",
+        "z": "28381ab7fc538ddf",
+        "name": "Humedad Suelo",
+        "group": "09c3aa4b03bd6645",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humedad del suelo",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 920,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "9e563b2139e024ec",
+        "type": "mqtt out",
+        "z": "28381ab7fc538ddf",
+        "name": "Regadora",
+        "topic": "regado/motor",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "090a2449b070508c",
+        "x": 900,
+        "y": 120,
+        "wires": []
+    }
+]
