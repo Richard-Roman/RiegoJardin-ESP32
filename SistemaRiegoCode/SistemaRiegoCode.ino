@@ -26,9 +26,9 @@ const char* password = "Abner123"; // Clave del wifi
 WiFiClientSecure espClient; 
 
 // CONFIGURAMOS CONEXION AL BROKER - SERVIDOR MQTT
-const char* mqtt_server = "cdb39d727533450abfa0d803133c8e6b.s2.eu.hivemq.cloud"; // URL del Cluster
-const char* usernameMQTT = "esp32"; // Cliente MQTT
-const char* passwordMQTT = "123456789"; // Clave del cliente MQTT
+const char* mqtt_server = "9d727533450abfa0d803133c8e6b.s2.eu.hivemq.cloud"; // URL del Cluster - cambiar por su propio URL para que funcione
+const char* usernameMQTT = "esp32"; // Cliente MQTT - cambiar según su configuración 
+const char* passwordMQTT = "123456789"; // Clave del cliente MQTT - cambiar según su configuración 
 const int mqtt_port = 8883; // Puerto
 
 PubSubClient client(espClient);
