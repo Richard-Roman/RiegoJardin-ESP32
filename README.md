@@ -17,15 +17,16 @@ El proyecto permite automatizar el riego de un jardín de manera eficiente y rem
 
 
 Diagrama del proyecto
-![Diagrama del proyecto](SistemaRiegoCode/Regadora Automatica.png)
+
+![Diagrama del proyecto](https://github.com/Richard-Roman/RiegoJardin-ESP32/blob/6792df16d1e65da3f5b98fdbf7954d67f07c8970/SistemaRiegoCode/Regadora%20Automatica.png)
 
 2. Descargar el código del proyecto desde GitHub.
 4. Instalar las bibliotecas necesarias para los sensores, conexión segura a wifi y MQTT.
 5. Configurar sus credenciales WIFI, MQTT y cargar al ESP32.
 6. Implementar el hardware del sistema.
     - Sensor de humedad y temperatura DHT11 – Pin 26.
-    - Pantalla LCD – RS en el Pin 22, Enable en el Pin 23, y los pines de datos en 5, 18, 19 y 21.
-    - Relé – Pin 0.
+    - Pantalla LCD – SDA al Pin 21 y SCL al pin 22.
+    - Relé – Pin 32.
     - Sensor de humedad - Pin 33.
 7. Importar el flujo de datos en Node-Red, configurar el MQTT.
 8. Ejecutar la aplicación Node-Red para visualizar y controlar el riego de manera intuitiva.
