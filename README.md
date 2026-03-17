@@ -14,6 +14,11 @@ El proyecto permite automatizar el riego de un jardín de manera eficiente y rem
     - Pantalla LCD.
     - Cables.
     - Protoboard.
+
+
+Diagrama del proyecto
+![Diagrama del proyecto](SistemaRiegoCode/Regadora Automatica.png)
+
 2. Descargar el código del proyecto desde GitHub.
 4. Instalar las bibliotecas necesarias para los sensores, conexión segura a wifi y MQTT.
 5. Configurar sus credenciales WIFI, MQTT y cargar al ESP32.
